@@ -1,0 +1,71 @@
+body {
+  font-size: 1rem; }
+
+#wrap {
+  width: 100%;
+  padding-top: 20px;
+  background-color: #f5d55a; }
+
+.siteLogo {
+  width: 15%;
+  float: left; }
+
+nav {
+  width: 80%;
+  text-align: right;
+  display: inline-block; }
+  nav > a {
+    font-size: 1.3rem;
+    width: 130px;
+    text-align: center;
+    display: inline-block;
+    line-height: 15px;
+    color: #2d3e4e;
+    font-weight: 300; }
+  nav span {
+    font-size: .9rem; }
+
+.hireUs {
+  float: right;
+  font-size: 1rem;
+  background-color: #2d3e4e;
+  color: white;
+  padding: 10px 30px;
+  margin: 0 20px 0;
+  text-transform: uppercase;
+  border: none; }
+
+.left {
+  float: left; }
+
+/*blockquote { font-size: 2rem; }*/
+a:link, a:active, a:visited {
+  text-decoration: none; }
+
+/*#upperSec { background-color: $yellow; }*/
+blockquote.bqUpper {
+  font-size: 2rem;
+  width: 60%;
+  margin: auto;
+  padding: 150px 0; }
+
+.bqFoot {
+  font-size: 2rem;
+  padding: 150px 0; }
+
+button {
+  display: inline-block; }
+
+.butFoot {
+  color: #2d3e4e;
+  padding: 15px 50px;
+  font-size: 1.1rem;
+  background-color: #f5d55a;
+  margin: 0;
+  border: 1px solid;
+  box-shadow: 8px 8px #f8e18a; }
+
+.bqMid {
+  font-size: 2rem;
+  width: 60%;
+  margin: auto; }
