@@ -1,0 +1,6 @@
+@mixin broderrad ($rad) {
+	-webkit-border-radius: $rad ;
+				-moz-border-radius: $rad;
+				-ms-border-radius: $rad;
+				border-radius: $rad;
+}
