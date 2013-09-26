@@ -1,172 +1,289 @@
-@import "variables.scss";
-@import "mixins.scss";
-@import "responsive.scss";
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
-@import "reset.css";
+/* imports */
+@import "variables";
+@import "mixins";
+@import "_functions";
+@import "_reset";	
+@import "responsive";
 
-																					
-body { font-size: 100%; font-family: 'Open Sans', sans-serif; }
-#wrap { width: 100%; }
-.logo { width: 120px; height: 130px; display: inline-block; margin: 5px 10px 5px 80px; }
-.siteLogo { width: 15%; float: left; background: url("../images/Simplr-logo.png") no-repeat 0 0; width: 110px; height: 130px; }
-nav { 
-			font-family: 'Open Sans', sans-serif;
-			width: 60%; 
-			text-align: right;
-			display: inline-block;
-			 > a { margin-right: 50px; font-size: 1rem; width: 120px; text-align: left; display: inline-block; line-height: 15px; color: $btncolor; font-weight: 300; font-family: 'Open Sans', sans-serif; font-weight: bold; }
+/* Common Elements Config */
+body { 
+	font-size: 100%; 
+	font-family: $os;
+}
+#upperPart {
+	background-color: $yellow;
+	@include flex;
+}
 
-			span { font-size: .9rem; font-weight: lighter; }
-		}
-	#upperSec nav { vertical-align: top; margin-top: 20px; }
-.hireUs { float: right; font-size: 1rem; background-color: $btncolor; color: $white; padding: 15px 40px; margin:0 20px 0; text-transform: uppercase; border: none; }
-#lowSec { background-color: $white; padding: 30px 20px 40px; }
+#wrap { 
+	/*max-width: $contWidth#{'px'}; */
+	margin: auto; 
+}
+#upperSec, #midSec, #lowSec {
+	max-width: $contWidth#{'px'};
+	margin: auto;
+}
+#middlePart {
+	background-color: #F5F5F7;
+}
+.logo{
+	width: 15%;
+}
+#siteLogo { 
+	float: left;
+	text-indent: -9999px;
+	background: url("../images/Simplr-logo.png") no-repeat 0 0;
+	/*width: liquid_layout(113, $contWidth);*/
+	height: 129px;
+	margin: 5px 10px 5px 80px;
+}
+
+#navigation {
+	display: inline-block;
+	font-family: $os;
+	text-align: center;
+	width: liquid_layout(800, $contWidth);
+	> a { 
+		display: inline-block; 
+		margin-right: 30px; 
+		@include font(bold, normal, 16px, 20px, $os); 
+		text-align: left; 
+		color: $btncolor; 
+		padding: 10px; 
+	}
+	span { 
+		display: block; 
+		@include font(normal, normal, 13px, 15px, $os);
+	}
+}
+
+#upperSec nav { vertical-align: top; margin-top: 20px; }
+.hireUs { 
+	float: right; 
+	font-size: 1rem; 
+	background-color: 
+	$btncolor; color: white; 
+	padding: 15px 40px; 
+	margin: 15px 20px 0; 
+	text-transform: uppercase; 
+	border: none; 
+}
+#lowSec { background-color: white; padding: 30px 20px 40px; }
 .left { float: left; }
 /*blockquote { font-size: 2rem; }*/
-a:link, a:active, a:visited { text-decoration: none; }
-#upperSec { background-color: $yellow; padding-top: 20px; }
+#upperSec { padding-top: 20px; }
 blockquote.bqUpper { 
-										font-size: 3rem;
-										width: 60%; margin: auto; 
-										padding: 150px 0; 
-										color: #2D3E4F; 
-										font-family: 'Open Sans', sans-serif; 
-										font-weight: 100; 
-										text-align: center; 
-										background: url("../images/Simplr-Splash-Symbol-1.png") no-repeat 0 30px,
-										 url("../images/Simplr-Splash-Symbol-2.png") no-repeat 500px 100px;
-										 }
-.bqFoot { font-size: 2.5rem; color: #2D3E4F; font-family: 'Open Sans', sans-serif; font-weight: 100; margin: 15px; display: inline-block; }
-button { 
+	font-size: 3rem;
+	width: 60%; margin: auto; 
+	padding: 150px 0; 
+	color: #2D3E4F; 
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 100; 
+	text-align: center; 
+	background: url("../images/Simplr-Splash-Symbol-1.png") no-repeat 20px 70px,
+	url("../images/Simplr-Splash-Symbol-2.png") no-repeat 500px 100px;
+}
+.bqFoot { 
+	font-size: 2.5rem; 
+	color: #2D3E4F; 
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 100; 
+	margin: 15px; 
 	display: inline-block; 
-	}
-.butFoot { color: $btncolor; padding: 15px 40px; font-size: 1.3rem;  background-color: $yellow; margin-right: 30px; border: none; box-shadow: 8px 8px lighten($yellow, 20%); float: right; }
-.bqMid {font-size: 3rem; width: 60%; margin: auto; padding: 80px 0; color: #2D3E4F; font-family: 'Open Sans', sans-serif; font-weight: lighter; text-align: center;}
-#midSec { background-color: #F5F5F7; }
-.services { text-align: center; }
-.psdhtml {
-						display: inline-block;
-						width: 250px;
-						margin: 10px 30px;
-						> i { background: url("../images/Simplr-HTML5-Illustration.png") no-repeat 0 0; display: inline-block; width: 130px; height: 150px; }
-						> h3 { text-transform: uppercase; font-weight: 700; font-size: .9rem; color: #2D3E4F; }
-						> p { padding: 8px; margin: 10px; line-height: 20px; font-family: 'Droid Sans', sans-serif; color: #2D3E4F; }
 }
-.rwd {
-						display: inline-block;
-						width: 250px;
-						margin: 10px 30px;
-						> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
-						> i { background: url("../images/Simplr-Responsive-Illustration.png") no-repeat 0 0; display: inline-block; width: 130px; height: 150px; }
-						> p { padding: 8px; margin: 10px; line-height: 20px; font-family: 'Droid Sans', sans-serif; color: #2D3E4F; }
-}
-.template {
-						display: inline-block;
-						width: 250px;
-						margin: 10px 30px;
-						> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
- 						> i { background: url("../images/Simplr-EmailTemplates-Illustration.png") no-repeat 0 0; display: inline-block; width: 130px; height: 150px; }
- 						> p { padding: 8px; margin: 10px; line-height: 20px; font-family: 'Droid Sans', sans-serif; color: #2D3E4F; }
- }
-.socialNav {
-							float: left;
-							text-align: left;
-							> div { display: inline-block; padding: 10px; margin-right: 10px;}
-							a { font-weight: bold; font-size: 1rem; font-family: 'Droid Sans', sans-serif; color: #000; }
-							span { color: #b1b1b1; font-size: .8rem; font-weight: normal; }
-							+ span { color: #B1B1B1; font-size: .8rem; float: right; margin: 20px 0;}
-						}
-footer { border-top: 1px #E6E6E6 dashed; padding: 10px; position: relative; margin: 20px 0; }						
-@media(min-width:1024px)and(max-width:1150px){
-	nav { width: 70%; }
-	.hireUs { float: none; display: block; margin: 10px auto; }
-}
-@media(max-width: 1024px){
-														.logo{ float: left; }
-														nav { width: 80%; }
-														.hireUs { float: none; display: block; margin: 20px auto; clear: both;}
-														blockquote.bqUpper { 
-																							width: 80%;
-																							background: url("../images/Simplr-Splash-Symbol-1.png") no-repeat 0 30px,
-																							 url("../images/Simplr-Splash-Symbol-2.png") no-repeat 300px 100px;
-														 }
-													 blockquote.bqUpper, blockquote.bqMid, blockquote.bqFoot { font-size: 2rem; }
-													blockquote .bqFoot { display: block; margin: 5px auto; float: none; text-align: center; }
-													.butFoot { float: none; display: block; margin: auto; text-align: center; }
 
+.butFoot { 
+	color: $btncolor; 
+	padding: 15px 40px; 
+	font-size: 1.3rem;  
+	background-color: $yellow; 
+	margin-right: 30px; 
+	border: none; 
+	box-shadow: 8px 8px lighten($yellow, 20%); 
+	float: right; 
 }
-@media(max-width:1130px)and(min-width:900px){
-													.logo{ margin-left: 50px;}
-													blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }
-													.butFoot { float: none; display: block; margin: auto; text-align: center; }
-													.butFoot { float: none; display: block; margin: auto; text-align: center; }
-}	
-@media(max-width:900px)and(min-width:875px){
-												nav { width: 70%; }
-}
-@media(max-width:875px) and (min-width:600px) {
-	nav { 
+.bqMid {
+	font-size: 3rem; 
+	width: 60%; 
+	margin: auto; 
+	padding: 80px 0; 
+	color: #2D3E4F; 
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: lighter; 
+	text-align: center;}
+	#midSec { background-color: #F5F5F7; }
+	.services { text-align: center; }
+	.psdhtml {
+		display: inline-block;
+		width: 250px;
+		margin: 10px 30px;
+		> i {
+			background: url("../images/Simplr-HTML5-Illustration.png") no-repeat 0 0; 
+			display: inline-block; 
+			width: 130px; 
+			height: 150px; 
+		}
+		> h3 { text-transform: uppercase; font-weight: 700; font-size: .9rem; color: #2D3E4F; }
+		> p { padding: 8px; margin: 10px; line-height: 20px; font-family: 'Droid Sans', sans-serif; color: #2D3E4F; }
+	}
+	.rwd {
+		display: inline-block;
+		width: 250px;
+		margin: 10px 30px;
+		> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
+		> i { 
+			background: url("../images/Simplr-Responsive-Illustration.png") no-repeat 0 0; 
+			display: inline-block; 
+			width: 130px; 
+			height: 150px; }
+			> p { padding: 8px; margin: 10px; line-height: 20px; font-family: 'Droid Sans', sans-serif; color: #2D3E4F; }
+		}
+		.template {
+			display: inline-block;
+			width: 250px;
+			margin: 10px 30px;
+			> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
+			> i 
+			{ 
+				background: url("../images/Simplr-EmailTemplates-Illustration.png") no-repeat 0 0; 
+				display: inline-block; 
+				width: 130px; 
+				height: 150px; 
+			}
+			> p { padding: 8px; margin: 10px; line-height: 20px; font-family: 'Droid Sans', sans-serif; color: #2D3E4F; }
+		}
+		.socialNav {
+			float: left;
+			text-align: left;
+			> div { display: inline-block; padding: 10px; margin-right: 10px;}
+			a { font-weight: bold; font-size: 1rem; font-family: 'Droid Sans', sans-serif; color: #000; }
+			span { color: #b1b1b1; font-size: .8rem; font-weight: normal; }
+			+ span { color: #B1B1B1; font-size: .8rem; float: right; margin: 20px 0;}
+		}
+		footer { 
+			border-top: 1px #E6E6E6 dashed; 
+			padding: 10px; 
+			position: relative; 
+			overflow: auto;
+			margin: 20px 0; 
+		}						
+		@media(min-width:1024px)and(max-width:1150px){
+			nav { width: 70%; }
+			.hireUs { float: none; display: inline-block; margin: 20px 10px auto; }
+		}
+		@media(max-width: 1024px)and(min-width:600px){
+			#siteLogo {
+
+			}
+			nav { width: 80%; margin-left: 35px; }
+			.hireUs { float: none; display: inline-block; margin: 20px auto; clear: both;}
+			blockquote.bqUpper { 
+				width: 80%;
+				background: url("../images/Simplr-Splash-Symbol-1.png") no-repeat 0 30px,
+				url("../images/Simplr-Splash-Symbol-2.png") no-repeat 300px 100px;
+			}
+			blockquote.bqUpper, blockquote.bqMid, blockquote.bqFoot { font-size: 2rem; }
+			blockquote .bqFoot { display: block; margin: 5px auto; float: none; text-align: center; }
+			.butFoot { float: none; display: block; margin: auto; text-align: center; }
+
+		}
+		@media(max-width:1130px)and(min-width:900px){
+			nav { width: 75%; 
+			}
+			.logo{ margin-left: 50px; }
+			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }
+			.butFoot { float: none; display: block; margin: auto; text-align: center; }
+			.butFoot { float: none; display: block; margin: auto; text-align: center; }
+		}	
+		@media(max-width:900px)and(min-width:875px){
+			nav { width: 70%; }
+		}
+		@media(max-width:875px) and (min-width:600px) {
+			nav { 
 				width: 50%; 
 				> .logo { margin: 5px 10px 5px 80px; }
 				a {
 					padding: 10px;
 					margin-right: 10px;
 				}
+			}
 		}
-}
-@media(max-width: 600px){
-														.logo { float: none; display: block; margin: 20px auto;}
-														nav { width: 80%; margin: 20px auto; display: block; clear: both; text-align: center;
-																	a { padding: 10px; text-align: center; }
-																}
-														blockquote.bqUpper { padding: 100px 0; }
-														blockquote.bqMid { padding: 40px 0; }
-														/*blockquote.bqFoot { width: 60%; }*/
-														.hireUs { float: none; display: block; margin: 5px auto; }
-														blockquote.bqUpper, blockquote.bqMid, /*blockquote.bqFoot */{ font-size: 1.8rem; width: 80%; }
-														footer {
-																		 + span {
-																						position: static;
-																						display: block;
-																						margin: auto;
-																						float: none;
-																						text-align: center;
-																					}
-																	}
-														blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }			
-														.butFoot { float: none; display: block; margin: auto; text-align: center; }
-														.socialNav {
-																								display: block;
-																								margin: auto;
-																								width: auto;
-																								text-align: center;
-																								float: none;
-																								> div {
-																									margin-right: 5px;
-																								}
-																								+ span {
-																												position: static;
-																												margin: auto;
-																												display: block;
-																												text-align: center;
-																												float: none;
-																											}
-																				}
-															#lowSec { padding: 30px 20px 10px; }					
-}
-@media(max-width:480px){
-	nav {
-		>a{
-			margin: auto;
+		@media(max-width: 600px){
+			#siteLogo {
+				width: 40%; 
+			}
+			.logo { 
+				float: none; 
+				display: block; 
+				margin: 20px auto;
+			}
+
+			nav { 
+				width: 80%; 
+				margin: 20px auto; 
+				display: block; 
+				clear: both; 
+				text-align: center;
+				a { 
+					padding: 10px; 
+					text-align: center; 
+				}
+			}
+
+			blockquote.bqUpper { padding: 100px 0; }
+			blockquote.bqMid { padding: 40px 0; }
+			/*blockquote.bqFoot { width: 60%; }*/
+
+			.hireUs { 
+				float: none; 
+				display:inline-block; 
+				margin: 5px auto; 
+			}
+			blockquote.bqUpper, blockquote.bqMid, /*blockquote.bqFoot */{ font-size: 1.8rem; width: 80%; }
+			footer {
+				+ span {
+					position: static;
+					display: block;
+					margin: auto;
+					float: none;
+					text-align: center;
+				}
+			}
+			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }			
+			.butFoot { float: none; display: block; margin: auto; text-align: center; }
+			.socialNav {
+				display: block;
+				margin: auto;
+				width: auto;
+				text-align: center;
+				float: none;
+				> div {
+					margin-right: 5px;
+				}
+				+ span {
+					position: static;
+					margin: auto;
+					display: block;
+					text-align: center;
+					float: none;
+				}
+			}
+			#lowSec { padding: 30px 20px 10px; }					
 		}
-	}
-}
-*{
-    -webkit-transition:all .5s ease;
-         -moz-transition:all .5s ease;
-               -o-transition:all .5s ease;
-                     transition:all .5s ease;
-}	
+
+
+
+
+		.clearfix 
+		{ 
+			display: inline-block; 
+		}
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+			zoom: 1;
+		}
