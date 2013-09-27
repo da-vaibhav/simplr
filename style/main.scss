@@ -3,7 +3,7 @@
 @import "mixins";
 @import "_functions";
 @import "_reset";	
-@import "responsive";
+
 
 /* Common Elements Config */
 body { 
@@ -12,7 +12,6 @@ body {
 }
 #upperPart {
 	background-color: $yellow;
-	@include flex;
 }
 
 #wrap { 
@@ -27,25 +26,33 @@ body {
 	background-color: #F5F5F7;
 }
 .logo{
-	width: 15%;
+	width: 10%;
+	display: inline-block;
+	margin-left: 100px;
 }
 #siteLogo { 
-	float: left;
 	text-indent: -9999px;
 	background: url("../images/Simplr-logo.png") no-repeat 0 0;
 	/*width: liquid_layout(113, $contWidth);*/
 	height: 129px;
-	margin: 5px 10px 5px 80px;
+	display: inline-block;
+	/*margin: 5px 10px 5px 80px;*/
+	min-width: 110px;
 }
 
 #navigation {
 	display: inline-block;
 	font-family: $os;
-	text-align: center;
-	width: liquid_layout(800, $contWidth);
+	text-align: right;
+	/*width: liquid_layout(700, $contWidth);*/
+	/*min-width: 570px;*/
+	width: 600px;
+	margin: 20px 25px 20px 150px;
 	> a { 
-		display: inline-block; 
+		/*display: inline-block; */
 		margin-right: 30px; 
+		float: left;
+		display: block;
 		@include font(bold, normal, 16px, 20px, $os); 
 		text-align: left; 
 		color: $btncolor; 
@@ -57,10 +64,11 @@ body {
 	}
 }
 
-#upperSec nav { vertical-align: top; margin-top: 20px; }
+#upperSec nav { vertical-align: top; }
 .hireUs { 
 	float: right; 
 	font-size: 1rem; 
+	min-width: 145px;
 	background-color: 
 	$btncolor; color: white; 
 	padding: 15px 40px; 
@@ -167,52 +175,113 @@ blockquote.bqUpper {
 			overflow: auto;
 			margin: 20px 0; 
 		}						
-		@media(min-width:1024px)and(max-width:1150px){
-			nav { width: 70%; }
-			.hireUs { float: none; display: inline-block; margin: 20px 10px auto; }
-		}
-		@media(max-width: 1024px)and(min-width:600px){
-			#siteLogo {
+		
 
-			}
+		.clearfix 
+		{ 
+			display: inline-block; 
+		}
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+			zoom: 1;
+		}
+
+
+		/*  */
+		@media(max-width: 1024px)and(min-width:600px){
 			nav { width: 80%; margin-left: 35px; }
-			.hireUs { float: none; display: inline-block; margin: 20px auto; clear: both;}
-			blockquote.bqUpper { 
+			.hireUs { 
+				float: none;
+				width: 147px; 
+				display: block; 
+				margin: 10px auto;
+				clear: both;
+				}
+			blockquote.bqUpper {
+				font-size: 2rem; 
 				width: 80%;
 				background: url("../images/Simplr-Splash-Symbol-1.png") no-repeat 0 30px,
 				url("../images/Simplr-Splash-Symbol-2.png") no-repeat 300px 100px;
 			}
 			blockquote.bqUpper, blockquote.bqMid, blockquote.bqFoot { font-size: 2rem; }
 			blockquote .bqFoot { display: block; margin: 5px auto; float: none; text-align: center; }
-			.butFoot { float: none; display: block; margin: auto; text-align: center; }
+			.butFoot { float: none; margin: auto; text-align: center; }
 
 		}
-		@media(max-width:1130px)and(min-width:900px){
-			nav { width: 75%; 
-			}
-			.logo{ margin-left: 50px; }
-			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }
-			.butFoot { float: none; display: block; margin: auto; text-align: center; }
-			.butFoot { float: none; display: block; margin: auto; text-align: center; }
-		}	
-		@media(max-width:900px)and(min-width:875px){
+		/*  */
+		@media(min-width:1024px)and(max-width:1150px){
 			nav { width: 70%; }
+			.hireUs { float: right; display: inline-block; margin: 20px; }
 		}
-		@media(max-width:875px) and (min-width:600px) {
+		/*  */		
+@media(max-width:1024px)and(min-width:900px){
+	#navigation 
+	{
+		width: 70%;
+	margin: 20px auto;	
+	}
+}
+		/*  */		
+		@media(max-width:1130px)and(min-width:900px){
+			#navigation { 
+						margin: 50px 25px 20px 80px;
+			}
+			.hireUs {
+				float: none;
+				margin: 20px auto;
+			}
+			.logo{ margin-left: 70px;  display: inline-block; }
+			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }
+			.butFoot { float: none; margin: auto; text-align: center; }
+		}	
+		/*  */		
+
+		@media(max-width:899px)and(min-width:875px){
+			.logo {
+				display: block;
+				margin: 10px auto;
+			}
+			#navigation { 
+				width: 70%; 
+				display: block;
+				margin: auto;
+				}
+		}
+		/*  */	
+		@media(max-width:874px) and (min-width:600px) {
+			.logo {
+							width: 113px;
+							min-width: 113px;
+							display: block;
+							margin: 10px auto;
+		}
+					#navigation {
+												width: 600px;
+												margin: 20px auto;
+					}
+			
 			nav { 
 				width: 50%; 
-				> .logo { margin: 5px 10px 5px 80px; }
+				> .logo { 
+					/*margin: 5px 10px 5px 80px; */
+				}
 				a {
 					padding: 10px;
 					margin-right: 10px;
 				}
 			}
 		}
-		@media(max-width: 600px){
-			#siteLogo {
-				width: 40%; 
-			}
-			.logo { 
+		/*  */
+
+		@media(max-width: 599px){
+			#siteLogo { width: 40%; }
+			.logo 
+			{ 
 				float: none; 
 				display: block; 
 				margin: 20px auto;
@@ -236,10 +305,16 @@ blockquote.bqUpper {
 
 			.hireUs { 
 				float: none; 
-				display:inline-block; 
+				width: 147px;
+				display:block; 
 				margin: 5px auto; 
+				text-align: center;
 			}
-			blockquote.bqUpper, blockquote.bqMid, /*blockquote.bqFoot */{ font-size: 1.8rem; width: 80%; }
+			blockquote.bqUpper, blockquote.bqMid 
+			{ 
+				font-size: 1.8rem; 
+				width: 80%; 
+			}
 			footer {
 				+ span {
 					position: static;
@@ -250,7 +325,7 @@ blockquote.bqUpper {
 				}
 			}
 			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }			
-			.butFoot { float: none; display: block; margin: auto; text-align: center; }
+			.butFoot { float: none; margin: auto; text-align: center; }
 			.socialNav {
 				display: block;
 				margin: auto;
@@ -270,20 +345,31 @@ blockquote.bqUpper {
 			}
 			#lowSec { padding: 30px 20px 10px; }					
 		}
+		/*  */
 
-
-
-
-		.clearfix 
-		{ 
-			display: inline-block; 
+		@media(max-width:499px){
+			.logo 
+			{
+				display: inline-block;	
+				width: auto; 																			/*  */
+				margin: auto;
+			}
+			#siteLogo {
+				float: none;
+				min-width: 110px;
+			}
 		}
-		.clearfix:after {
-			visibility: hidden;
-			display: block;
-			font-size: 0;
-			content: " ";
-			clear: both;
-			height: 0;
-			zoom: 1;
+
+		/*  */
+		@media(max-width:480px){
+			.logo {
+				display: block;
+				width: 35%;
+				margin: auto;
+			}
+			#navigation {
+				text-align: center;
+				> a { display: block; margin: 10px auto; text-align: center;}
+			}
 		}
+		/*  */

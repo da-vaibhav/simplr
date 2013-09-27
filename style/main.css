@@ -69,18 +69,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@media (max-width: 480px) {
-  nav > a {
-    margin: auto; } }
 /* Common Elements Config */
 body {
   font-size: 100%;
   font-family: "Open Sans", sans-serif; }
 
 #upperPart {
-  background-color: #f5d55a;
-  display: -webkit-flex;
-  display: flex; }
+  background-color: #f5d55a; }
 
 #wrap {
   /*max-width: $contWidthpx; */
@@ -94,24 +89,32 @@ body {
   background-color: #F5F5F7; }
 
 .logo {
-  width: 15%; }
+  width: 10%;
+  display: inline-block;
+  margin-left: 100px; }
 
 #siteLogo {
-  float: left;
   text-indent: -9999px;
   background: url("../images/Simplr-logo.png") no-repeat 0 0;
   /*width: liquid_layout(113, $contWidth);*/
   height: 129px;
-  margin: 5px 10px 5px 80px; }
+  display: inline-block;
+  /*margin: 5px 10px 5px 80px;*/
+  min-width: 110px; }
 
 #navigation {
   display: inline-block;
   font-family: "Open Sans", sans-serif;
-  text-align: center;
-  width: 62.5%; }
+  text-align: right;
+  /*width: liquid_layout(700, $contWidth);*/
+  /*min-width: 570px;*/
+  width: 600px;
+  margin: 20px 25px 20px 150px; }
   #navigation > a {
-    display: inline-block;
+    /*display: inline-block; */
     margin-right: 30px;
+    float: left;
+    display: block;
     font: bold normal 1rem/1.25rem "Open Sans", sans-serif;
     text-align: left;
     color: #2d3e4e;
@@ -121,12 +124,12 @@ body {
     font: normal normal 0.8125rem/0.9375rem "Open Sans", sans-serif; }
 
 #upperSec nav {
-  vertical-align: top;
-  margin-top: 20px; }
+  vertical-align: top; }
 
 .hireUs {
   float: right;
   font-size: 1rem;
+  min-width: 145px;
   background-color: #2d3e4e;
   color: white;
   padding: 15px 40px;
@@ -282,14 +285,19 @@ footer {
   overflow: auto;
   margin: 20px 0; }
 
-@media (min-width: 1024px) and (max-width: 1150px) {
-  nav {
-    width: 70%; }
+.clearfix {
+  display: inline-block; }
 
-  .hireUs {
-    float: none;
-    display: inline-block;
-    margin: 20px 10px auto; } }
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  zoom: 1; }
+
+/*  */
 @media (max-width: 1024px) and (min-width: 600px) {
   nav {
     width: 80%;
@@ -297,11 +305,13 @@ footer {
 
   .hireUs {
     float: none;
-    display: inline-block;
-    margin: 20px auto;
+    width: 147px;
+    display: block;
+    margin: 10px auto;
     clear: both; }
 
   blockquote.bqUpper {
+    font-size: 2rem;
     width: 80%;
     background: url("../images/Simplr-Splash-Symbol-1.png") no-repeat 0 30px, url("../images/Simplr-Splash-Symbol-2.png") no-repeat 300px 100px; }
 
@@ -316,15 +326,34 @@ footer {
 
   .butFoot {
     float: none;
-    display: block;
     margin: auto;
     text-align: center; } }
-@media (max-width: 1130px) and (min-width: 900px) {
+/*  */
+@media (min-width: 1024px) and (max-width: 1150px) {
   nav {
-    width: 75%; }
+    width: 70%; }
+
+  .hireUs {
+    float: right;
+    display: inline-block;
+    margin: 20px; } }
+/*  */
+@media (max-width: 1024px) and (min-width: 900px) {
+  #navigation {
+    width: 70%;
+    margin: 20px auto; } }
+/*  */
+@media (max-width: 1130px) and (min-width: 900px) {
+  #navigation {
+    margin: 50px 25px 20px 80px; }
+
+  .hireUs {
+    float: none;
+    margin: 20px auto; }
 
   .logo {
-    margin-left: 50px; }
+    margin-left: 70px;
+    display: inline-block; }
 
   blockquote.bqFoot {
     display: block;
@@ -334,27 +363,39 @@ footer {
 
   .butFoot {
     float: none;
-    display: block;
-    margin: auto;
-    text-align: center; }
-
-  .butFoot {
-    float: none;
-    display: block;
     margin: auto;
     text-align: center; } }
-@media (max-width: 900px) and (min-width: 875px) {
-  nav {
-    width: 70%; } }
-@media (max-width: 875px) and (min-width: 600px) {
+/*  */
+@media (max-width: 899px) and (min-width: 875px) {
+  .logo {
+    display: block;
+    margin: 10px auto; }
+
+  #navigation {
+    width: 70%;
+    display: block;
+    margin: auto; } }
+/*  */
+@media (max-width: 874px) and (min-width: 600px) {
+  .logo {
+    width: 113px;
+    min-width: 113px;
+    display: block;
+    margin: 10px auto; }
+
+  #navigation {
+    width: 600px;
+    margin: 20px auto; }
+
   nav {
     width: 50%; }
     nav > .logo {
-      margin: 5px 10px 5px 80px; }
+      /*margin: 5px 10px 5px 80px; */ }
     nav a {
       padding: 10px;
       margin-right: 10px; } }
-@media (max-width: 600px) {
+/*  */
+@media (max-width: 599px) {
   #siteLogo {
     width: 40%; }
 
@@ -382,8 +423,10 @@ footer {
   /*blockquote.bqFoot { width: 60%; }*/
   .hireUs {
     float: none;
-    display: inline-block;
-    margin: 5px auto; }
+    width: 147px;
+    display: block;
+    margin: 5px auto;
+    text-align: center; }
 
   blockquote.bqUpper, blockquote.bqMid {
     font-size: 1.8rem;
@@ -404,7 +447,6 @@ footer {
 
   .butFoot {
     float: none;
-    display: block;
     margin: auto;
     text-align: center; }
 
@@ -425,14 +467,28 @@ footer {
 
   #lowSec {
     padding: 30px 20px 10px; } }
-.clearfix {
-  display: inline-block; }
+/*  */
+@media (max-width: 499px) {
+  .logo {
+    display: inline-block;
+    width: auto;
+    /*  */
+    margin: auto; }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-  zoom: 1; }
+  #siteLogo {
+    float: none;
+    min-width: 110px; } }
+/*  */
+@media (max-width: 480px) {
+  .logo {
+    display: block;
+    width: 35%;
+    margin: auto; }
+
+  #navigation {
+    text-align: center; }
+    #navigation > a {
+      display: block;
+      margin: 10px auto;
+      text-align: center; } }
+/*  */
