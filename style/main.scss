@@ -18,15 +18,18 @@ body {
 	/*max-width: $contWidth#{'px'}; */
 	margin: auto; 
 }
-#upperSec, #midSec, #lowSec {
+#upperSec, #midSec, #lowSec 
+{
 	max-width: $contWidth#{'px'};
 	margin: auto;
 }
-#middlePart {
+#middlePart 
+{
 	background-color: #F5F5F7;
 }
 .logo{
-	width: 10%;
+	width: 12%;
+	overflow: auto;
 	display: inline-block;
 	margin-left: 100px;
 }
@@ -44,6 +47,7 @@ body {
 	display: inline-block;
 	font-family: $os;
 	text-align: right;
+	overflow: auto;
 	/*width: liquid_layout(700, $contWidth);*/
 	/*min-width: 570px;*/
 	width: 600px;
@@ -68,6 +72,8 @@ body {
 .hireUs { 
 	float: right; 
 	font-size: 1rem; 
+	overflow: auto;
+	vertical-align: top;
 	min-width: 145px;
 	background-color: 
 	$btncolor; color: white; 
@@ -192,16 +198,39 @@ blockquote.bqUpper {
 		}
 
 
+		
+		/* ___________________________________________________________ MEDIA QUERIES ______________________________________________________________________ */
+		@media(max-width: 1214px){
+			#navigation {
+				margin: 20px 25px 20px 70px;
+			}
+
+		}
+		/*  */
+		@media(max-width:1130px)and(min-width:900px){
+			#navigation { 
+				margin: 20px 25px 20px 80px;
+			}
+			.hireUs {
+				float: none;
+				margin: 20px auto;
+			}
+			.logo{ margin-left: 70px;  display: inline-block; }
+			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }
+			.butFoot { float: none; margin: auto; text-align: center; }
+		}	
+		/*  */		
 		/*  */
 		@media(max-width: 1024px)and(min-width:600px){
 			nav { width: 80%; margin-left: 35px; }
 			.hireUs { 
 				float: none;
+				text-align: center;
 				width: 147px; 
 				display: block; 
 				margin: 10px auto;
 				clear: both;
-				}
+			}
 			blockquote.bqUpper {
 				font-size: 2rem; 
 				width: 80%;
@@ -213,33 +242,23 @@ blockquote.bqUpper {
 			.butFoot { float: none; margin: auto; text-align: center; }
 
 		}
-		/*  */
+/*  */
+
 		@media(min-width:1024px)and(max-width:1150px){
 			nav { width: 70%; }
 			.hireUs { float: right; display: inline-block; margin: 20px; }
 		}
 		/*  */		
-@media(max-width:1024px)and(min-width:900px){
-	#navigation 
-	{
-		width: 70%;
-	margin: 20px auto;	
-	}
-}
-		/*  */		
-		@media(max-width:1130px)and(min-width:900px){
-			#navigation { 
-						margin: 50px 25px 20px 80px;
+		
+		@media(max-width:1024px)and(min-width:900px){
+			#navigation 
+			{
+				width: 70%;
+				margin: 20px auto;	
 			}
-			.hireUs {
-				float: none;
-				margin: 20px auto;
-			}
-			.logo{ margin-left: 70px;  display: inline-block; }
-			blockquote.bqFoot { display: block; margin: 10px auto; float: none; text-align: center; }
-			.butFoot { float: none; margin: auto; text-align: center; }
-		}	
+		}
 		/*  */		
+		
 
 		@media(max-width:899px)and(min-width:875px){
 			.logo {
@@ -250,20 +269,21 @@ blockquote.bqUpper {
 				width: 70%; 
 				display: block;
 				margin: auto;
-				}
+			}
 		}
 		/*  */	
 		@media(max-width:874px) and (min-width:600px) {
 			.logo {
-							width: 113px;
-							min-width: 113px;
-							display: block;
-							margin: 10px auto;
-		}
-					#navigation {
-												width: 600px;
-												margin: 20px auto;
-					}
+				width: 113px;
+				min-width: 113px;
+				display: block;
+				margin: 10px auto;
+			}
+			#navigation {
+				display: block;
+				width: 600px;
+				margin: 20px auto;
+			}
 			
 			nav { 
 				width: 50%; 
@@ -281,23 +301,32 @@ blockquote.bqUpper {
 		@media(max-width: 599px){
 			#siteLogo { width: 40%; }
 			.logo 
-			{ 
+			{ 	
+				width: 113px;
 				float: none; 
 				display: block; 
 				margin: 20px auto;
 			}
-
-			nav { 
-				width: 80%; 
-				margin: 20px auto; 
-				display: block; 
-				clear: both; 
-				text-align: center;
-				a { 
-					padding: 10px; 
-					text-align: center; 
+			#navigation 
+		{
+				display: block;
+				width: 90%;
+				margin: 10px auto;
+				
+				.navMenu 
+				{
+					display: inline-block;
+					padding: 5px;
+					margin-right: 15px;
+					float: none;
 				}
+				.hireUs 
+			{
+				height: 50px;
+				overflow: auto;
+				margin: 10px auto;
 			}
+		}
 
 			blockquote.bqUpper { padding: 100px 0; }
 			blockquote.bqMid { padding: 40px 0; }
@@ -361,15 +390,50 @@ blockquote.bqUpper {
 		}
 
 		/*  */
+		
+		@media(max-width:550px){
+			#navigation 
+			{
+				width: 55%;
+				.navMenu 
+				{
+					margin: 5px auto;
+				}
+			}
+			.navMenu {
+				width: 120px;
+			}
+			.logo
+			{
+				display: block;
+				width: 113px;
+				margin: auto;
+			}
+		}
+		/*  */
 		@media(max-width:480px){
 			.logo {
 				display: block;
-				width: 35%;
+				width: 113px;
 				margin: auto;
 			}
 			#navigation {
 				text-align: center;
-				> a { display: block; margin: 10px auto; text-align: center;}
+				> .navMenu { 
+					display: block; 
+					margin: 10px auto; 
+					text-align: center;
+					}
+			}
+			.bqFoot {
+				font-size: 1.5rem;
+			}
+			.butFoot 
+			{
+				display: block;
+				width: 80%;
+				font-size: 1.2rem;
 			}
 		}
 		/*  */
+		/* ___________________________________________________________ MEDIA QUERIES ______________________________________________________________________ */
