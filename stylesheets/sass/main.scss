@@ -21,7 +21,7 @@ body { font-size: 100%; font-family: $os; }
 
 .logo {
 	width: 113px;
-	overflow: auto;
+	/*overflow: auto;*/
 	display: block;
 	margin-left: 100px;
 	float: left;
@@ -45,7 +45,7 @@ body { font-size: 100%; font-family: $os; }
 		width: 700px;
 		margin: 20px 25px 20px 100px;
 		
-		> .navMenu { 
+		> a { 
 			margin-left: 50px; 
 			float: left;
 			min-width: 125px;
@@ -60,7 +60,7 @@ body { font-size: 100%; font-family: $os; }
 		float: right; 
 		display: block;
 		font-size: 1rem; 
-		overflow: auto;
+		/*overflow: auto;*/
 		min-width: 147px;
 		max-width: 147px;
 		background-color: $btncolor; 
@@ -322,7 +322,7 @@ body { font-size: 100%; font-family: $os; }
 				width: 90%;
 				margin: 10px auto;
 				
-				.navMenu 
+				.a
 				{
 					display: inline-block;
 					padding: 5px;
@@ -404,7 +404,7 @@ body { font-size: 100%; font-family: $os; }
 			#navigation 
 			{
 				width: 55%;
-				.navMenu 
+				a
 				{
 					margin: 5px auto;
 				}
@@ -477,7 +477,7 @@ body { font-size: 100%; font-family: $os; }
 
 @media(max-width: 1000px)and(min-width: 920px){
 	#navigation{
-		.navMenu { margin-left: 20px; } 
+		>a { margin-left: 20px; } 
 	}
 }
 
@@ -492,7 +492,7 @@ body { font-size: 100%; font-family: $os; }
 @media(max-width: 920px)and(min-width: 811px){
 	.logo { display: block; margin: auto; width: 113px; float: none; }
 	#navigation { display: block; margin: auto; text-align: center;
-		> .navMenu { float: none; display: inline-block; text-align: center; margin: 5px; /*overflow: auto;*/ }
+		> a { float: none; display: inline-block; text-align: center; margin: 5px; /*overflow: auto;*/ }
 }
 	.hireUs { float: none; display: block; margin: 10px auto; }
 	.butFoot { min-width: 233px; max-width: 250px; display: block; margin: 20px auto; float: none; }
@@ -501,7 +501,7 @@ body { font-size: 100%; font-family: $os; }
 	.logo { float: none; display: block; margin: auto; width: 113px; }
 	#navigation
 	{	width: 90%;	margin: 20px auto; display: block; text-align: center;
-		.navMenu { float: none; display: inline-block; margin: 20px auto; text-align: center; padding: 0; }
+		> a { float: none; display: inline-block; margin: 20px auto; text-align: center; padding: 0; }
 	}
 	.hireUs { float: none; display: block; margin: 20px auto; }
 }
@@ -529,7 +529,7 @@ body { font-size: 100%; font-family: $os; }
 	display: block;
 	text-align: center;
 
-	>.navMenu{
+	> a{
 		margin-left: 10px;
 		width: 20%;
 		display: inline-block;
@@ -551,7 +551,7 @@ body { font-size: 100%; font-family: $os; }
 #navigation {
 	width: 90%;
 	margin: 10px auto;
-	.navMenu { float: none; display: block;	margin: auto; }
+	> a { float: none; display: block;	margin: auto; }
 }
 .socialNav {
 	+ span{ float: none; display: block; margin: auto; clear: both;}
