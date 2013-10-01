@@ -37,7 +37,6 @@ body { font-size: 100%; font-family: $os; }
 
 	#navigation {
 		display: inline-block;
-		vertical-align: top;
 		font-family: $os;
 		text-align: right;
 		/*overflow: auto;*/
@@ -62,7 +61,6 @@ body { font-size: 100%; font-family: $os; }
 		display: block;
 		font-size: 1rem; 
 		overflow: auto;
-		vertical-align: top;
 		min-width: 147px;
 		max-width: 147px;
 		background-color: $btncolor; 
@@ -494,7 +492,7 @@ body { font-size: 100%; font-family: $os; }
 @media(max-width: 920px)and(min-width: 811px){
 	.logo { display: block; margin: auto; width: 113px; float: none; }
 	#navigation { display: block; margin: auto; text-align: center;
-		> .navMenu { float: none; display: inline-block; text-align: center; margin: 5px; overflow: auto; }
+		> .navMenu { float: none; display: inline-block; text-align: center; margin: 5px; /*overflow: auto;*/ }
 }
 	.hireUs { float: none; display: block; margin: 10px auto; }
 	.butFoot { min-width: 233px; max-width: 250px; display: block; margin: 20px auto; float: none; }
