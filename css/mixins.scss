@@ -1,0 +1,49 @@
+@mixin box_sizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin border_radius($radiusWidth) {
+    -moz-border-radius: $radiusWidth;
+    -webkit-border-radius: $radiusWidth;
+    -o-border-radius: $radiusWidth;
+    -ms-border-radius: $radiusWidth;
+    border-radius: $radiusWidth;
+}
+
+@mixin text_shadow($xSpread, $ySpread, $thickness, $shadowColor) {
+	text-shadow: $xSpread $ySpread $thickness $shadowColor;
+}
+
+@mixin box_shadow($horizontalDir, $verticalDir, $horizontalSpread, $verticalSpread, $color){
+    -webkit-box-shadow: $horizontalDir $verticalDir $horizontalSpread $verticalSpread $color;
+    -moz-box-shadow: $horizontalDir $verticalDir $horizontalSpread $verticalSpread $color;
+    box-shadow: $horizontalDir $verticalDir $horizontalSpread $verticalSpread $color;
+}
+
+@mixin opacity($opacityValue){
+	opacity: $opacityValue;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacityValue * 100})"; //IE8
+	filter: alpha(opacity=$opacityValue * 100); //IE8
+}
+																	/* CUSTOM MIXINS  */
+																											
+
+@mixin flex{
+	display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexnone {
+	-webkit-flex: none;
+          flex: none;
+}
+
+@mixin flex1 {
+	-webkit-flex: 1;
+          flex: 1;
+}
+@mixin flex2 {
+	-webkit-flex: 2;
+          flex: 2;
+}
