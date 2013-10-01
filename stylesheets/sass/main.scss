@@ -27,7 +27,7 @@ body { font-size: 100%; font-family: $os; }
 	float: left;
 	#siteLogo { 
 		text-indent: -9999px;
-		background: url("../images/Simplr-logo.png") no-repeat 0 0;
+		background: url("../../images/Simplr-logo.png") no-repeat 0 0;
 		/*width: liquid_layout(113, $contWidth);*/
 		height: 129px;
 		display: inline-block;
@@ -101,8 +101,8 @@ body { font-size: 100%; font-family: $os; }
 		font-family: $os; 
 		font-weight: 100; 
 		text-align: center; 
-		background: url("../images/Splash1.png") no-repeat 20px 70px,
-		url("../images/Splash2.png") no-repeat 650px 150px;
+		background: url("../../images/Splash1.png") no-repeat 20px 70px,
+		url("../../images/Splash2.png") no-repeat 650px 150px;
 	}
 	.bqFoot { 
 		font-size: 3.75rem; 
@@ -142,7 +142,7 @@ body { font-size: 100%; font-family: $os; }
 			width: 250px;
 			margin: 10px 30px;
 			> i {
-				background: url("../images/Simplr-HTML5.png") no-repeat 0 0; 
+				background: url("../../images/Simplr-HTML5.png") no-repeat 0 0; 
 				display: inline-block; 
 				width: 130px; 
 				height: 150px; 
@@ -156,7 +156,7 @@ body { font-size: 100%; font-family: $os; }
 			margin: 10px 30px;
 			> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
 			> i { 
-				background: url("../images/SimplrResponsive.png") no-repeat 0 0; 
+				background: url("../../images/SimplrResponsive.png") no-repeat 0 0; 
 				display: inline-block; 
 				width: 130px; 
 				height: 150px; }
@@ -169,7 +169,7 @@ body { font-size: 100%; font-family: $os; }
 				> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
 				> i 
 				{ 
-					background: url("../images/EmailTemplates.png") no-repeat 0 0; 
+					background: url("../../images/EmailTemplates.png") no-repeat 0 0; 
 					display: inline-block; 
 					width: 130px; 
 					height: 150px; 
