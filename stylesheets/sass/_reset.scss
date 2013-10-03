@@ -1,4 +1,7 @@
-@import 'mixins';
+//import
+
+@import "mixins";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,6 +26,15 @@ time, mark, audio, video {
 	-o-transition:all .5s ease;
 	transition:all .5s ease;
 	@include box_sizing();
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ".";
+	clear: both;
+	height: 0;
 }
 
 a:link,
