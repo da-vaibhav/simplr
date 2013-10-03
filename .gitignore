@@ -4,3 +4,4 @@
 codekit-config.json,
 stylesheets/.DS_Store,
 stylesheets/sass/.DS_Store
+*.scssc
