@@ -15,21 +15,14 @@ body { font-size: 100%; font-family: $os; }
 /* // UPPER PART */
 
 #upperPart { background-color: $yellow; }
-
-.logo {
-	width: 113px;
-	/*overflow: auto;*/
-	display: block;
-	margin-left: 5%;
-	float: left;
 	#siteLogo { 
-		text-indent: -9999px;
-		background: url("../../images/Simplr-logo.png") no-repeat 0 0;
-		/*width: liquid_layout(113, $contWidth);*/
+		width: 113px;
+		float: left;
+		margin-left: 5%;
+		//text-indent: -9999px;
 		height: 129px;
 		display: inline-block;
-		/*margin: 5px 10px 5px 80px;*/
-		min-width: 113px; }
+		min-width: 113px;
 	}
 
 	#navigation {

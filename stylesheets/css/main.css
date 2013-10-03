@@ -94,20 +94,13 @@ body {
 #upperPart {
   background-color: #f5d55a; }
 
-.logo {
+#siteLogo {
   width: 113px;
-  /*overflow: auto;*/
-  display: block;
+  float: left;
   margin-left: 5%;
-  float: left; }
-  .logo #siteLogo {
-    text-indent: -9999px;
-    background: url("../../images/Simplr-logo.png") no-repeat 0 0;
-    /*width: liquid_layout(113, $contWidth);*/
-    height: 129px;
-    display: inline-block;
-    /*margin: 5px 10px 5px 80px;*/
-    min-width: 113px; }
+  height: 129px;
+  display: inline-block;
+  min-width: 113px; }
 
 #navigation {
   display: inline-block;
