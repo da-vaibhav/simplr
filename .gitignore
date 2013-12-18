@@ -1,0 +1,7 @@
+.DS_store,
+.DS_Store,
+.sass-cache,
+codekit-config.json,
+stylesheets/.DS_Store,
+stylesheets/sass/.DS_Store
+*.scssc
