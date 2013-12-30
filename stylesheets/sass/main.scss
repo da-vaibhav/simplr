@@ -7,14 +7,20 @@
 @import "_reset";	
 
 /* Common Elements Config */
-body { font-size: 100%; font-family: $os; }
+body { 
+	font-size: 100%; 
+	/*font-family: $os; */
+	font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+}
 
 #wrap { margin: auto; }
 #upperSec, #midSec, #lowSec { max-width: $contWidth#{'px'}; margin: auto; }
 
 /* // UPPER PART */
 
-#upperPart { background-color: $yellow; }
+#upperPart { 
+	/*background-color: $yellow; */
+}
 	#siteLogo { 
 		width: 113px;
 		float: left;
@@ -26,24 +32,29 @@ body { font-size: 100%; font-family: $os; }
 	}
 
 	#navigation {
-		display: inline-block;
-		font-family: $os;
+		/*display: inline-block;*/
+		/*font-family: $os;*/
 		text-align: right;
 		/*overflow: auto;*/
 		/*width: liquid_layout(700, $contWidth);*/
 		/*min-width: 570px;*/
 		width: 65%;
-		margin: 2%;
-		
+		margin: 10px;
+		float: left;
 		> a { 
 			margin-left: 50px; 
 			float: left;
 			min-width: 125px;
-			@include font(bold, normal, 16px, 20px, $os); 
+			@include font(bold, normal, 16px, 20px, Arial Rounded MT Bold); 
 			text-align: left; 
 			color: $btncolor; 
 			padding: 10px; }
-			span { display: block; @include font(normal, normal, 13px, 15px, $os); }
+			span { 
+				display: block; 
+				/*@include font(normal, normal, 13px, 15px, $os); */
+				@include font(normal, normal, 13px, 15px, Arial Rounded MT Bold); 
+
+			}
 		}
 
 	.hireUs { 
@@ -64,7 +75,7 @@ body { font-size: 100%; font-family: $os; }
 	/* // MID PART */
 	#middlePart 
 	{
-		background-color: #F5F5F7;
+		/*background-color: #F5F5F7;*/
 	}
 
 
@@ -84,21 +95,23 @@ body { font-size: 100%; font-family: $os; }
 	/*blockquote { font-size: 2rem; }*/
 	#upperSec { padding-top: 20px; }
 	.bqUpper { 
-		font-size: 3.75rem;
+		/*font-size: 3.75rem;*/
+		font-size: 2.75rem;
 		width: 75%; margin: auto; 
 		padding: 150px 0; 
 		color: #2D3E4F; 
-		font-family: $os; 
+		/*font-family: $os; */
 		font-weight: 100; 
 		text-align: center; 
-		background: url("../../images/Splash1.png") no-repeat 20px 70px,
-		url("../../images/Splash2.png") no-repeat 650px 150px;
+		/*background: url("../../images/Splash1.png") no-repeat 20px 70px,*/
+		/*url("../../images/Splash2.png") no-repeat 650px 150px;*/
 	}
 	.bqFoot { 
-		font-size: 3.75rem; 
+		/*font-size: 3.75rem; */
+		font-size: 2.75rem;
 		width: 65%;
 		color: #2D3E4F; 
-		font-family: $os; 
+		/*font-family: $os; */
 		font-weight: 100; 
 		margin: 15px; 
 		display: inline-block; 
@@ -116,16 +129,19 @@ body { font-size: 100%; font-family: $os; }
 		text-transform: uppercase;
 	}
 	.bqMid {
-		font-size: 3.75rem;
+		/*font-size: 3.75rem;*/
+		font-size: 2.75rem;
 		width: 75%; 
 		margin: auto; 
 		padding: 80px 0; 
 		color: #2D3E4F; 
-		font-family: $os; 
+		/*font-family: $os; */
 		font-weight: lighter; 
 		font-style: normal;
 		text-align: center;}
-		#midSec { background-color: #F5F5F7; }
+		#midSec {
+		 	/*background-color: #F5F5F7; */
+		 }
 		.services { text-align: center; }
 		.psdhtml, .rwd, .template {
 			display: inline-block;
@@ -140,7 +156,16 @@ body { font-size: 100%; font-family: $os; }
 				text-indent: -9999px;
 			}
 			> h3 { text-transform: uppercase; font-weight: 700; font-size: 0.9rem; color: #2D3E4F; }
-			> p { word-wrap: break-word; padding: 8px; margin: 10px; line-height: 20px; font-family: $ds; color: #2D3E4F; text-align: left; font-size: 0.85rem;}
+			> p { 
+				word-wrap: break-word; 
+				padding: 8px; 
+				margin: 10px; 
+				line-height: 20px;
+				 /*font-family: $ds; */
+				 color: #2D3E4F; 
+				 text-align: left; 
+				 font-size: 0.85rem;
+			 }
 		}
 		.psdhtml {
 			> i { background-image: url("../../images/Simplr-HTML5.png"); }
@@ -155,7 +180,11 @@ body { font-size: 100%; font-family: $os; }
 				float: left;
 				text-align: left;
 				> div { display: inline-block; padding: 10px; margin-right: 10px;}
-				a { font-weight: normal; font-size: 1rem; font-family: $ds; color: #000; }
+				a { font-weight: normal; 
+					font-size: 1rem; 
+					/*font-family: $ds; */
+					color: #000; 
+				}
 				span { color: #b1b1b1; font-size: 0.8rem; font-weight: normal; }
 				+ span { color: #B1B1B1; font-size: 0.8rem; float: right; margin: 20px 0;}
 			}
@@ -431,7 +460,11 @@ body { font-size: 100%; font-family: $os; }
 	display: block;
 	margin: 20px auto;
 	float: none;}
-	.bqUpper, .bqMid, .bqFoot { font-size: 2.3rem; }
+	.bqUpper, 
+	.bqMid, 
+	.bqFoot { 
+		font-size: 2.3rem; 
+	}
 }
 
 
