@@ -1,0 +1,8 @@
+/* Constants */
+$linkColor: #218BC3; //Base link color
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+	&:hover {text-decoration: underline;}
+}

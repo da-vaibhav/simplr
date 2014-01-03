@@ -1,67 +1,124 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link href="images/favicon.ico" rel="icon" type="image/x-icon">
-	<title>Simplr - Unobtrusively Responsive</title>
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="stylesheets/css/main.css" media="screen">
+    <meta charset="UTF-8">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <title>Simplr - Unobtrusively Responsive</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/css/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/css/main.css" media="screen">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
-	<div id="wrap">
-		<div id="upperPart">
-			<div id="upperSec">
-				<a href="#" class="hireUs">hire us</a> <!-- hireUs -->
-				<blockquote class="bqUpper">Front end development is like an elephant in the room, but we take it seriosly.
-				</blockquote> <!-- add '!' art the end-->
-			</div> <!-- end upperSec  -->
-		</div> <!-- end upperPart -->
+    <div id="wrap">
+        <div id="sidebar" class="side-nav white-nav">
+            <a href="/simplr/index.html" class="homeLink">Simplr <img src="images/simplr-logo.png" alt="" /> </a>
+            <ul>
+                <li>
+                    <span class="fa fa-keyboard-o sidebar-link">Blog</span>
+                </li>
+                <li>
+                    <span href="" class="fa fa-list-ol sidebar-link" data-section="manifesto-section">Our Manifesto</span>
+                </li>
+                <li>
+                    <span href="" class="fa fa-sitemap sidebar-link">Front-End Services</span>
+                </li>
+                <li>
+                    <span href="" class="fa fa-list-alt sidebar-link">Portfolio</span>
+                </li>
+                <li>
+                    <span class="fa fa-crosshairs sidebar-link" data-section="about-section">About Simplr</span>
+                </li>
+            </ul>
+        </div> <!-- sideNav -->
 
-		<div id="middlePart">
-			<div id="midSec">
-				<blockquote class="bqMid">Our neatly coded, thoroughly tested and pixel prefected front end Services.</blockquote>
-				
-				<div class="services"><div class="psdhtml">
-						<h2>psd to html</h2>
-						<p>This is more than just a chop-shop work because we don't limit your chances to get stuck with static code. We spice'em up with JavaScript.</p>
-					</div>
+        <!-- first page -->
+        <div class="home-content">
+            <h1> There's difference between CHOP-SHOP and MNC </h1> <br>
+            <h1>We're that differenece.</h1>
+            <hr>
+            <p class="home-quote">
+                There are lots of Front-End chop-shops out there that only do waht's asked. Believing in aand striving to achieve globally acknowledged concepts such as Progressive Enhancement, Graceful degradation is something they want to charge extras for. Not Us.
+            </p>
+            <span class="home-contact">Have front end development in the works?
+                <a href="" class="page-link">Let’s collaborate.</a>
+            </span>
+        </div>
 
-					<div class="rwd">
-						<h2>responsive web design</h2>
-						<p>Mobile Revolution is already here and it's taken us by storm. Make your customer's mobile experience a bliss with minimalistic code.</p>
-					</div>
 
-					<div class="template">
-						<h2>awesome email templates</h2>
-						<p>Despite non-existence of any standards for email, we vow to make your emails look &lsquo;<strong>wow</strong>&rsquo;. We have got our own set of standards.</p>
-					</div>
+        <!-- Manifesto -->
 
-				</div><!-- end services -->
+        <div id="manifesto-section" class="manifesto layout clearfix hidden">
+            <ul class="manifesto-ul">
+                <li>
+                    <img src="images/simplr-logo.png" alt="image" />
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
+                </li>
 
-			</div> <!-- midSec -->
-		</div> <!-- end middlePart -->
+                <li>
+                    <img src="images/simplr-logo.png" alt="image" />
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
+                </li>
 
-		<div id="lowerPart">
-			<div id="lowSec">
-				<blockquote class="bqFoot">Have front-end development in the works ?</blockquote>
-				<a href="#" class="butFoot">Lets&nbsp;collaborate</a><!-- collaborate -->
+                <li>
+                    <img src="images/simplr-logo.png" alt="image" />
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
+                </li>
 
-				<footer>
-					<div class="socialNav">
-						<div class="twit"> <a href="#">Twitter</a>  <br>
-							<span>@simplrInc</span>
-						</div>
-						<div class="fb"> <a href="#">Facebook</a>  <br>
-							<span>/Simplrpage</span>
-						</div>
-						<div class="gPlus"> <a href="#">Google+</a>  <br>
-							<span>+Simplrpage</span>
-						</div>
-					</div>				
-					<span>Copyright 2013 &#64; Simplr. By <a id="partnerLink" href="http://www.idyllic-software.com/" target="_blank">Idyllic Software</a></span>
-			</footer>
-		</div> <!-- lowSec -->
-	</div> <!-- end lowerPart -->
+                <li>
+                    <img src="images/simplr-logo.png" alt="image" />
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
+                </li>
+
+            </ul>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.
+            </p>
+
+        </div>  
+
+
+        <!-- about section -->
+        <div id="about-section" class="layout about-section hidden">
+            <div class="about">
+             <h1>About Simplr</h1>
+             <p>
+                 Simplr began with an initiative to go about simplifying the Front End Development process so it not only comforts the clients and enables them to create confidence & strong understanding in and of a their project.
+             </p>
+
+             <p>
+                Simplr prides itself on delivering the most neatly coded, thoroughly tested & pixel perfected code to it’s partners &amp; clients.
+            </p>     
+        </div>
+    </div>
+
 </div> <!-- end wrap -->
+
+<script> 
+    $(document).ready( function(){
+        $('.sidebar-link').click(showthis);
+
+        function showthis(){
+            console.log($(this).attr('data-section'));
+            console.log($(this));
+            var targeted = $(this).attr('data-section')
+            var tt = document.getElementById(targeted);
+            $(tt).addClass('show-up');
+            // $('#wrap > .layout:not(.show-up)').addClass('pushed');
+            // $('#sidebar > li').removeClass('active-link');
+            // $(this).parent('li').addClass('active-link');
+            $('.home-content').hide();
+            $('#sidebar').removeClass('white-nav').addClass('collapsed');
+        }
+    })
+</script>
 </body>
 </html>

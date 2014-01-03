@@ -1,0 +1,39 @@
+@mixin box_sizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin border_radius($radiusWidth) {
+    -moz-border-radius: $radiusWidth;
+    -webkit-border-radius: $radiusWidth;
+    -o-border-radius: $radiusWidth;
+    -ms-border-radius: $radiusWidth;
+    border-radius: $radiusWidth;
+}
+
+@mixin text_shadow($xSpread, $ySpread, $thickness, $shadowColor) {
+	text-shadow: $xSpread $ySpread $thickness $shadowColor;
+}
+
+@mixin box_shadow($horizontalDir, $verticalDir, $horizontalSpread, $verticalSpread, $color){
+    -webkit-box-shadow: $horizontalDir $verticalDir $horizontalSpread $verticalSpread $color;
+    -moz-box-shadow: $horizontalDir $verticalDir $horizontalSpread $verticalSpread $color;
+    box-shadow: $horizontalDir $verticalDir $horizontalSpread $verticalSpread $color;
+}
+
+@mixin font_face($name, $fontsPath){
+	@font-face {
+		font-family: '#{$name}';
+		src: url('$fontsPath/#{$name}/#{$name}.eot');
+		src: url('$fontsPath/#{$name}/#{$name}.eot?#iefix') format('embedded-opentype'),
+		url('$fontsPath/#{$name}/#{$name}.woff') format('woff'),
+		url('$fontsPath/#{$name}/#{$name}.ttf')  format('truetype'),
+		url('$fontsPath/#{$name}/#{$name}.svg#svgFontName') format('svg');
+	}
+}
+
+@mixin opacity($opacityValue){
+	opacity: $opacityValue;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacityValue * 100})"; //IE8
+	filter: alpha(opacity=$opacityValue * 100); //IE8
+}
