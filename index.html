@@ -5,12 +5,7 @@
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
     <title>Simplr - Unobtrusively Responsive</title>
     <meta name="viewport" content="width=device-width">
-    <link href='http://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheets/css/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/css/main.css" media="screen">
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -18,19 +13,19 @@
             <a href="/simplr/index.html" class="homeLink">Simplr <img src="images/simplr-logo.png" alt="" /> </a>
             <ul>
                 <li>
-                    <span class="fa fa-keyboard-o sidebar-link">Blog</span>
+                    <a>Blog</a>
                 </li>
                 <li>
-                    <span href="" class="fa fa-list-ol sidebar-link" data-section="manifesto-section">Our Manifesto</span>
+                    <a>Our Manifesto</a>
                 </li>
                 <li>
-                    <span href="" class="fa fa-sitemap sidebar-link">Front-End Services</span>
+                    <a>Front-End Services</a>
                 </li>
                 <li>
-                    <span href="" class="fa fa-list-alt sidebar-link">Portfolio</span>
+                    <a>Portfolio</a>
                 </li>
                 <li>
-                    <span class="fa fa-crosshairs sidebar-link" data-section="about-section">About Simplr</span>
+                    <a>About Simplr</a>
                 </li>
             </ul>
         </div> <!-- sideNav -->
@@ -89,36 +84,21 @@
         <!-- about section -->
         <div id="about-section" class="layout about-section hidden">
             <div class="about">
-             <h1>About Simplr</h1>
-             <p>
-                 Simplr began with an initiative to go about simplifying the Front End Development process so it not only comforts the clients and enables them to create confidence & strong understanding in and of a their project.
-             </p>
+                <h1>About Simplr</h1>
+                <p>
+                    Simplr began with an initiative to go about simplifying the Front End Development process so it not only comforts the clients and enables them to create confidence & strong understanding in and of a their project.
+                </p>
 
-             <p>
-                Simplr prides itself on delivering the most neatly coded, thoroughly tested & pixel perfected code to it’s partners &amp; clients.
-            </p>     
+                <p>
+                    Simplr prides itself on delivering the most neatly coded, thoroughly tested & pixel perfected code to it’s partners &amp; clients.
+                </p>     
+            </div>
         </div>
-    </div>
 
-</div> <!-- end wrap -->
+    </div> <!-- end wrap -->
 
-<script> 
-    $(document).ready( function(){
-        $('.sidebar-link').click(showthis);
-
-        function showthis(){
-            console.log($(this).attr('data-section'));
-            console.log($(this));
-            var targeted = $(this).attr('data-section')
-            var tt = document.getElementById(targeted);
-            $(tt).addClass('show-up');
-            // $('#wrap > .layout:not(.show-up)').addClass('pushed');
-            // $('#sidebar > li').removeClass('active-link');
-            // $(this).parent('li').addClass('active-link');
-            $('.home-content').hide();
-            $('#sidebar').removeClass('white-nav').addClass('collapsed');
-        }
-    })
-</script>
+    <script src="js/lib/jquery-2.0.3.min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
 </body>
 </html>
