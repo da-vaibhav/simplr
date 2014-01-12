@@ -1,8 +1,0 @@
-@import "global/_variables";
-@import "global/_css3";
-@import "global/_reset";
-@import "global/_mixins";
-@import "global/_functions";
-@import "global/_typography";
-
-p {@include font(normal, normal, 12px, 20px, arial);}
