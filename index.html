@@ -5,101 +5,32 @@
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
     <title>Simplr - Unobtrusively Responsive</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="stylesheets/css/main.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div id="wrap">
-        <div id="sidebar" class="side-nav white-nav">
-            <a href="/simplr/index.html" class="homeLink">Simplr <img src="images/simplr-logo.png" alt="" /> </a>
-            <ul>
-                <li>
-                    <a>Blog</a>
-                </li>
-                <li>
-                    <a>Our Manifesto</a>
-                </li>
-                <li>
-                    <a>Front-End Services</a>
-                </li>
-                <li>
-                    <a>Portfolio</a>
-                </li>
-                <li>
-                    <a>About Simplr</a>
-                </li>
-            </ul>
-        </div> <!-- sideNav -->
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="#manifesto">Our Manifesto</a></li>
+    </ul>
+    <div id="container"></div>
 
-        <!-- first page -->
-        <div class="home-content">
-            <h1> There's difference between CHOP-SHOP and MNC </h1> <br>
-            <h1>We're that differenece.</h1>
-            <hr>
-            <p class="home-quote">
-                There are lots of Front-End chop-shops out there that only do waht's asked. Believing in aand striving to achieve globally acknowledged concepts such as Progressive Enhancement, Graceful degradation is something they want to charge extras for. Not Us.
-            </p>
-            <span class="home-contact">Have front end development in the works?
-                <a href="" class="page-link">Let’s collaborate.</a>
-            </span>
-        </div>
-
-
-        <!-- Manifesto -->
-
-        <div id="manifesto-section" class="manifesto layout clearfix hidden">
-            <ul class="manifesto-ul">
-                <li>
-                    <img src="images/simplr-logo.png" alt="image" />
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
-                </li>
-
-                <li>
-                    <img src="images/simplr-logo.png" alt="image" />
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
-                </li>
-
-                <li>
-                    <img src="images/simplr-logo.png" alt="image" />
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
-                </li>
-
-                <li>
-                    <img src="images/simplr-logo.png" alt="image" />
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.</p>
-                </li>
-
-            </ul>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magni, sequi aperiam voluptatibus labore rem facere sunt quae? Voluptatibus, porro, recusandae blanditiis praesentium aspernatur facere modi consequatur rerum aperiam tempora.
-            </p>
-
-        </div>  
-
-
-        <!-- about section -->
-        <div id="about-section" class="layout about-section hidden">
-            <div class="about">
-                <h1>About Simplr</h1>
-                <p>
-                    Simplr began with an initiative to go about simplifying the Front End Development process so it not only comforts the clients and enables them to create confidence & strong understanding in and of a their project.
-                </p>
-
-                <p>
-                    Simplr prides itself on delivering the most neatly coded, thoroughly tested & pixel perfected code to it’s partners &amp; clients.
-                </p>     
-            </div>
-        </div>
-
-    </div> <!-- end wrap -->
-    
+    <!-- dependancies -->
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/jquery-2.0.3.min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
-    
+
+    <!-- templates -->
+    <script type="text/template" id="home-template">
+        <h1>Loading...</h1>
+    </script>
+    <script type="text/template" id="manifesto-template">
+        <h1>Manifesto ...</h1>
+    </script>
+
+    <script type="text/javascript" src="js/views/home.js"></script>
+    <script type="text/javascript" src="js/views/manifesto.js"></script>
+    <script type="text/javascript" src="js/routers/routes.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>
