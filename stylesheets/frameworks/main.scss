@@ -411,3 +411,64 @@ table {
     border-spacing: 0;
 }
 /* END OF NORMALIZE */
+
+.page-title {
+  margin-top: 100px;
+}
+h1, h2, h6 {
+  font-weight: 300;
+}
+h1, h2 {
+  font-size: 60px;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+
+/* container */
+.wrapper {
+  width: 84.375%;
+  float: right;
+  text-align: center;
+  background-color: #e6e6e6;
+  min-height: 100%;
+}
+/* left navigation */
+.nav {
+  width: 15.625%;
+  height: 100%;
+  float: left;
+}
+/*  */
+
+/* ------- home-template styles -------- */
+
+.large-quote {
+  /*@include font (normal, normal, 40px, 40px, sans-serif);  */
+}
+
+.flex-margin { 
+  margin: 10%;
+}
+.small-flex-margin {
+  margin: 5%; 
+}
+
+.home-para {
+  @include font (normal, normal, 22px, 30px, sans-serif);
+}
+.details-text {
+  @include font (normal, normal, 18px, 30px, sans-serif); 
+}
+/* manifesto styles */
+.manifesto-ul li {
+  text-align: left;
+  &:nth-of-type(even) {
+    float: right;
+    width: 50%;
+  }
+  &:nth-of-type(odd) {
+    float: left;
+    width: 50%;
+  }
+}
+

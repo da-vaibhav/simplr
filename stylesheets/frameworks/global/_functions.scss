@@ -17,8 +17,8 @@ $unitRelative: rem; //Relative font size unit
 @function relativeValue($target) {
 	$fontsize: $target/$context#{$unitRelative};
 	$lineheight: $target/$context#{$unitRelative};
-	@return $fontsize;
-	@return $lineheight;
+	@return $fontsize;  // fallback value
+	@return $lineheight; // fallback value
 }
 
 /* FONT SHORTHAND */
@@ -26,6 +26,8 @@ $unitRelative: rem; //Relative font size unit
 	$fontsize: relativeValue($fontSize);
 	$lineheight: relativeValue($lineHeight);
 	font: #{$fontWeight} #{$fontStyle} #{$fontsize}/#{$lineheight} #{$fontFamily};
+	font-size: $fontsize;
+	line-height: $lineheight;
 }
 
 
