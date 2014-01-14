@@ -87,7 +87,7 @@ template {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: Open Sans, sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -408,6 +408,10 @@ table {
 }
 
 /* END OF NORMALIZE */
+li {
+  list-style: none;
+}
+
 /* Constants */
 /* Use case => .sidebar {width: liquid_layout(360, 960); */
 /*  Target / Context = Result */
@@ -420,6 +424,11 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+body {
+  background: #fff;
+  color: #222;
 }
 
 h1,
@@ -449,6 +458,14 @@ h1, h2 {
   font-size: 60px;
   line-height: 1em;
   margin-bottom: 20px;
+  -webkit-font-feature-settings: "kern", "liga", "case";
+  /* No variation */
+  -moz-font-feature-settings: "kern=1", "liga=1", "case=1";
+  /* Firefox 4.0 to 14.0 */
+  -moz-font-feature-settings: "kern", "liga", "case";
+  /* Firefox 15.0 onwards */
+  font-feature-settings: "kern", "liga", "case";
+  /* No variation */
 }
 
 h3, h4 {
@@ -468,6 +485,10 @@ hr {
   margin: -1px 0 20px 0;
   border: none;
   border-top: 1px #000 solid;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
+  margin: 0 0 10px 0;
 }
 
 /* container */
@@ -497,9 +518,9 @@ hr {
 }
 
 .details-text {
-  font: normal normal 1.125rem/1.875rem sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font: normal normal 0.9375rem/1.3125rem sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.3125rem;
 }
 
 /* manifesto styles */

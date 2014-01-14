@@ -68,7 +68,7 @@ template {
  */
 
 html {
-    font-family: sans-serif; /* 1 */
+    font-family: Open Sans, sans-serif; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -409,3 +409,6 @@ table {
     border-spacing: 0;
 }
 /* END OF NORMALIZE */
+li {
+  list-style: none;
+}
