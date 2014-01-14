@@ -8,30 +8,34 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="#manifesto">Our Manifesto</a></li>
-    </ul>
+    <ul id="nav"></ul>
     <div id="container"></div>
 
     <!-- local dependancies -->
-    <!--<script src="js/lib/underscore-min.js"></script>
-    <script src="js/lib/jquery-2.0.3.min.js"></script>
-    <script src="js/lib/backbone-min.js"></script>-->
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
 
     <!-- CDN Dependancies -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>-->
 
     <!-- templates -->
+    <script type="text/template" id="nav-template">
+        <li><a href="">Home</a></li>
+        <li><a href="#!manifesto">Our Manifesto</a></li>
+    </script>
+
     <script type="text/template" id="home-template">
         <h1>Loading...</h1>
     </script>
+
     <script type="text/template" id="manifesto-template">
         <h1>Manifesto ...</h1>
     </script>
 
+    <script type="text/javascript" src="js/views/nav.js"></script>
     <script type="text/javascript" src="js/views/home.js"></script>
     <script type="text/javascript" src="js/views/manifesto.js"></script>
     <script type="text/javascript" src="js/routers/routes.js"></script>
