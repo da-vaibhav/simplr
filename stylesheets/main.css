@@ -441,7 +441,7 @@ h5 {
   font-weight: 500;
 }
 
-a, a.link-block .link {
+a, a.link-block .link, a:hover {
   color: #218BC3;
   text-decoration: none;
 }
@@ -505,6 +505,50 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   width: 15.625%;
   height: 100%;
   float: left;
+}
+
+.side-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  overflow: hidden;
+  cursor: default;
+  color: #C8C8C8;
+  /*background: #222;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  -moz-transition: width ease-in-out 0.28s, background linear 0.1s;
+  -webkit-transition: width ease-in-out 0.28s, background linear 0.1s;
+  -o-transition: width ease-in-out 0.28s, background linear 0.1s;
+  transition: width ease-in-out 0.28s, background linear 0.1s;
+  -ms-transform: translate(0px, 0);
+  -moz-transform: translate(0px, 0);
+  -webkit-transform: translate3d(0px, 0, 0);
+  transform: translate(0px, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.side-nav li a {
+  font-weight: 300;
+  padding-left: 50px;
+  border-top: 1px #2D2D2D solid;
+  display: block;
+  position: relative;
+  line-height: 44px;
+}
+
+.side-nav.white-nav li a {
+  color: #333;
+  border-color: rgba(1, 1, 1, 0.1);
+  line-height: 35px;
+  font-size: 14px;
 }
 
 /*  */
