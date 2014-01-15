@@ -9,28 +9,14 @@
     <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <ul id="nav" class="nav side-nav white-nav"></ul>
-    <div id="container" class="wrapper clearfix"></div>
-
-    <!-- local dependencies -->
-    <script src="js/lib/underscore-min.js"></script>
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/backbone-min.js"></script>
-
-    <!-- CDN Dependencies -->
-    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>-->
-
-    <!-- templates -->
-    <script type="text/template" id="nav-template">
+    <ul id="nav" class="nav side-nav">
         <li>
             <a href="" class="nav-link">
                 <span>Home</span>
             </a>
         </li>
         <li>
-            <a href="" class="nav-link">
+            <a href="http://www.simplr.co.in/blog" class="nav-link">
                 <span>Blog</span>
             </a>
         </li>
@@ -49,22 +35,35 @@
                 <span>About Simplr</span>
             </a>
         </li>
-    </script>
+    </ul>
+    <div id="container" class="wrapper flex-padding clearfix"></div>
+
+    <!-- local dependencies -->
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+
+    <!-- CDN Dependencies -->
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>-->
+
+    <!-- templates -->
 
     <script type="text/template" id="home-template">
-        <div class="quote-box flex-margin">
+        <div class="quote-box">
             <h1 class="large-quote page-title">
                 There's difference between Chop-Shop and a MNC.
             </h1>
             <h1 class="large-quote">We are that difference.</h1>
         </div>
-        <p class="lead-in flex-margin"> There are lots of Front End chop-shops out there that only do what's asked. Believing in and striving to achieve globally acknowledged concepts such as Progressive Enhancement, graceful degradation is something they want to charge extra for. Not us.
+        <p class="lead-in"> There are lots of Front End chop-shops out there that only do what's asked. Believing in and striving to achieve globally acknowledged concepts such as Progressive Enhancement, graceful degradation is something they want to charge extra for. Not us.
         </p>
     </script>
 
     <script type="text/template" id="manifesto-template">
         <h1 class="page-title">Manifesto</h1>
-        <ul class="manifesto-ul flex-margin clearfix">
+        <ul class="manifesto-ul flex-padding clearfix">
             <li class="small-flex-margin">
                 <h3 class="intro-heading">We don't outsource the outsourced</h3>
                 <p class="details-text">It is a common practice to outsource the already outsourced work and get it quick &amp; dirty
@@ -104,17 +103,31 @@
 
     <script type="text/template" id="about-template">
         <h1 class="intro-heading page-title">About Simplr</h1>
-        <p class="flex-margin lead-in">Simplr began with an initiative to go about simplifying the Front End Development process so it not only comforts the clients and enables them to create confidence &amp; strong understanding of their project. <br>
+        <p class="lead-in">Simplr began with an initiative to go about simplifying the Front End Development process so it not only comforts the clients and enables them to create confidence &amp; strong understanding of their project. <br>
         Simplr prides itself on delivering the most neatly coded, thoroughly tested &amp; pixel perfected code to it's partners &amp; clients.</p>
     </script>
 
-    <script type="text/javascript" src="js/views/nav.js"></script>
+    <script>
+    function foo () {
+                $('#nav').not('.homeNav').mouseenter(function(){
+                    console.log($(this));
+                        $(this).css({
+                            width: 200
+                        });
+                    });
+                $('#nav').not('.homeNav').mouseleave(function(){
+                    console.log($(this));
+                        $(this).css({
+                            width: 100
+                        });
+                });
+    }
+    </script>
+    <script type="text/javascript" src="js/routers/routes.js"></script>
     <script type="text/javascript" src="js/views/home.js"></script>
     <script type="text/javascript" src="js/views/manifesto.js"></script>
     <script type="text/javascript" src="js/views/services.js"></script>
     <script type="text/javascript" src="js/views/about.js"></script>
-    <script type="text/javascript" src="js/routers/routes.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-
 </body>
 </html>

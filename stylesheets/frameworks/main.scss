@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .wrapper {
   width: 84.375%;
   float: right;
-  text-align: center;
+  margin-left: 200px;
   /*background-color: #e6e6e6;*/
   min-height: 100%;
 }
@@ -78,7 +78,24 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   width: 15.625%;
   height: 100%;
   float: left;
+  &:hover { width: 200px; }
+  &.expanded {
+    width: 15.625%;
+    background: #FFF;
+  }
+  &.collapsed {
+    width: 50px;
+  }
 }
+
+.nav-collapsed .side-nav {
+  width: 50px;
+}
+.nav-collapsed .side-nav li a {
+  /*background: transparent;*/
+  background: gray;
+}
+
 
 .side-nav {
   position: fixed;
@@ -89,7 +106,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   overflow: hidden;
   cursor: default;
   color: #C8C8C8;
-  /*background: #222;*/
+  background: #222;
   overflow-x: hidden;
   overflow-y: auto;
   -moz-transition: width ease-in-out 0.28s, background linear 0.1s;
@@ -110,10 +127,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .side-nav li a {
   font-weight: 300;
   padding-left: 50px;
-  border-top: 1px #2D2D2D solid;
+  border-top: 1px white solid;
   display: block;
   position: relative;
   line-height: 44px;
+}
+.side-nav.white-nav {
+  background: #fff;
+}
+.side-nav.collapsed li {
+  max-height: 45px;
 }
 .side-nav.white-nav li a {
   color: #333;
@@ -125,8 +148,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 
 /* ------- home-template styles -------- */
 
-.flex-margin { 
-  margin: 10%;
+.flex-padding { 
+  padding: 0 10%;
 }
 .small-flex-margin {
   margin: 5%; 
