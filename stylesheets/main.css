@@ -429,6 +429,7 @@ a:hover {
 body {
   background: #fff;
   color: #222;
+  font-size: 15px;
 }
 
 h1,
@@ -496,7 +497,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   width: 84.375%;
   float: right;
   text-align: center;
-  background-color: #e6e6e6;
+  /*background-color: #e6e6e6;*/
   min-height: 100%;
 }
 
@@ -562,7 +563,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 }
 
 .details-text {
-  font: normal normal 0.9375rem/1.3125rem sans-serif;
+  font: normal normal 0.9375rem/1.3125rem Open sans;
   font-size: 0.9375rem;
   line-height: 1.3125rem;
 }
