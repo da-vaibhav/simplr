@@ -548,8 +548,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .side-nav.white-nav li a {
   color: #333;
   border-color: rgba(1, 1, 1, 0.1);
-  line-height: 35px;
-  font-size: 14px;
+  /*line-height: 35px;*/
+  /*font-size: 14px;*/
 }
 
 /*  */
@@ -563,7 +563,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 }
 
 .details-text {
-  font: normal normal 0.9375rem/1.3125rem Open sans;
+  font: normal normal 0.9375rem/1.3125rem Open Sans;
   font-size: 0.9375rem;
   line-height: 1.3125rem;
 }
