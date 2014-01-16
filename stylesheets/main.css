@@ -627,6 +627,14 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   width: 50%;
 }
 
+/* services template styles  */
+.services-list li {
+  list-style-type: disc;
+}
+.services-list li:first-child {
+  margin-top: 20px;
+}
+
 /* font icons */
 [class*="openwebicons-"]:before {
   font-family: 'OpenWeb Icons', sans-serif;
