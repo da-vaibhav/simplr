@@ -5,6 +5,10 @@
     margin: auto;
   }
 
+  .flex-padding {
+    padding: 0 5%;
+  }
+
   h1, h2 {
     font-size: 40px;
   }
