@@ -109,18 +109,16 @@
 
     <script>
     function foo () {
-                $('#nav').not('.homeNav').mouseenter(function(){
-                    console.log($(this));
-                        $(this).css({
-                            width: 200
-                        });
-                    });
-                $('#nav').not('.homeNav').mouseleave(function(){
-                    console.log($(this));
-                        $(this).css({
-                            width: 100
-                        });
+        $('#nav').not('.homeNav').mouseenter(function(){
+                $(this).css({
+                    width: 200
                 });
+            });
+        $('#nav').not('.homeNav').mouseleave(function(){
+                $(this).css({
+                    width: 100
+                });
+        });
     }
     </script>
     <script type="text/javascript" src="js/routers/routes.js"></script>
