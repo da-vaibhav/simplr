@@ -12,17 +12,20 @@ window.AllRoutes = Backbone.Router.extend({
     },
     manifesto: function () {
         new manifestoView();
-        $('#nav').removeClass('homeNav');
+        $('#nav').removeClass('homeNav').find('a').removeClass('active');
+        $('#nav a[data-attr="manifesto"]').addClass('active');
         foo();
     },
     services: function () {
         new servicesView();
-        $('#nav').removeClass('homeNav');
+        $('#nav').removeClass('homeNav').find('a').removeClass('active');
+        $('#nav a[data-attr="services"]').addClass('active');
         foo();
     },
     about: function () {
         new aboutView();
-        $('#nav').removeClass('homeNav');
+        $('#nav').removeClass('homeNav').find('a').removeClass('active');
+        $('#nav a[data-attr="about"]').addClass('active');
         foo();
     }
 });

@@ -5,34 +5,41 @@
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
     <title>Simplr - Unobtrusively Responsive</title>
     <meta name="viewport" content="width=device-width">
+    <link href="http://weloveiconfonts.com/api/?family=openwebicons" rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
     <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-    <ul id="nav" class="nav side-nav">
-        <li>
-            <a href="" class="nav-link">
-                <span>Home</span>
+    <ul id="nav" class="nav side-nav transition">
+        <li class="home-link">
+            <a href="/simplr" class="nav-link">
+                <img src="images/logo.png" alt="Simplr" class="simpr-logo transition" />
+                <span class="simplr-tagline transition">Unobtrusively Responsive</span>
             </a>
         </li>
         <li>
-            <a href="http://www.simplr.co.in/blog" class="nav-link">
+            <a href="/blog" class="nav-link">
                 <span>Blog</span>
+                <i class="openwebicons-geo"></i>
             </a>
         </li>
         <li>
-            <a href="#!manifesto" class="nav-link">
+            <a href="#!manifesto" class="nav-link" data-attr="manifesto">
                 <span>Our Manifesto</span>
+                <i class="openwebicons-foaf"></i>
             </a>
         </li>
         <li>
-            <a href="#!services" class="nav-link">
+            <a href="#!services" class="nav-link" data-attr="services">
                 <span>Services</span>
+                <i class="openwebicons-open-share-simple"></i>
             </a>
         </li>
         <li>
-            <a href="#!about" class="nav-link">
+            <a href="#!about" class="nav-link" data-attr="about">
                 <span>About Simplr</span>
+                <i class="openwebicons-opml"></i>
             </a>
         </li>
     </ul>
@@ -113,11 +120,13 @@
                 $(this).css({
                     width: 200
                 });
+                $('.simplr-tagline').css({ opacity: 1 });
             });
         $('#nav').not('.homeNav').mouseleave(function(){
                 $(this).css({
-                    width: 100
+                    width: 80
                 });
+                $('.simplr-tagline').css({ opacity: 0 });
         });
     }
     </script>
