@@ -576,13 +576,14 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   color: #aaa;
 }
 .side-nav li:last-child a {
-  border-bottom: 1px #2D2D2D solid;
+  border-bottom: 1px rgba(1, 1, 1, 0.1) solid;
 }
 
 .side-nav li a {
   font-weight: 300;
   padding-left: 80px;
   border-top: 1px #2D2D2D solid;
+  border-color: rgba(1, 1, 1, 0.1);
   display: block;
   position: relative;
   line-height: 44px;
@@ -596,23 +597,14 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 }
 
 .home-link {
-  min-height: 129px;
-}
-.home-link img, .home-link span {
-  display: block;
-  margin: auto;
-  text-align: center;
+  min-height: 150px;
 }
 
+.side-nav:not(.homeNav) li a {
+  border-color: #2d2d2d;
+}
 .side-nav:not(.homeNav) a:hover {
   background-color: #111;
-}
-
-.side-nav.white-nav li a {
-  color: #333;
-  border-color: rgba(1, 1, 1, 0.1);
-  /*line-height: 35px;*/
-  /*font-size: 14px;*/
 }
 
 .nav-link.active i:before, .nav-link.active span {
@@ -656,12 +648,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 }
 
 /* logo */
-.simpr-tagline {
-  display: block;
-}
-
 .simpr-logo {
   max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .transition {
