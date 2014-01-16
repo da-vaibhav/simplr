@@ -538,6 +538,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .side-nav.homeNav .nav-link span {
   color: #333;
 }
+.side-nav.homeNav .simplr-icon {
+  font-size: 7rem;
+}
+.side-nav.homeNav .nav-link-home {
+  color: black;
+  font-size: 2rem;
+}
 .side-nav.homeNav [class*="openwebicons-"]:before {
   color: #b2b2b2;
 }
@@ -587,7 +594,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 }
 
 .nav-link.active i:before, .nav-link.active span {
-  color: #FFC425;
+  color: #ffc425;
 }
 
 /*  */
@@ -646,6 +653,25 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .nav-link-home {
   display: inline-block;
   width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  color: #ffc425;
+  font-size: 1.2rem;
+}
+.nav-link-home .simplr-icon {
+  font-size: 5.5rem;
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-bottom: -20px;
+}
+.nav-link-home .simplr-text {
+  display: inline-block;
+  margin-top: -20px;
 }
 
 /*# sourceMappingURL=main.css.map */

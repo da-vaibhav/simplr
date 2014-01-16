@@ -104,10 +104,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   user-select: none;
   &.homeNav {
     .nav-link:hover { background-color: rgba(1, 1, 1, 0.04); }
-    .nav-link span {
-      color: #333;
-    }
+    .nav-link span { color: #333; }
+    .simplr-icon { font-size: 7rem; }
     background: #FFF;
+    .nav-link-home { color: black; font-size: 2rem; }
     [class*="openwebicons-"]:before {
       color: #b2b2b2;
     }
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   .nav-link:hover { background-color: #111; }
 }
 .nav-link.active  {
-  i:before, span { color: #FFC425; }
+  i:before, span { color: $yellow; }
 }
 /*  */
 
@@ -210,4 +210,23 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .nav-link-home {
   display: inline-block;
   width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  color: $yellow;
+  font-size: 1.2rem;
+  .simplr-icon {
+    font-size: 5.5rem;
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);   
+    margin-bottom: -20px;
+  }
+  .simplr-text {
+    display: inline-block;
+    margin-top: -20px;
+  }
 }
