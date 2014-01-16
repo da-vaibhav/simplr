@@ -71,21 +71,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   width: 84.375%;
   float: right;
   margin-left: 15.625%;
-  /*background-color: #e6e6e6;*/
   min-height: 100%;
 }
-/* left navigation */
-.nav {
-  &:hover { width: 200px; }
-  &.expanded {
-    width: 15.625%;
-    background: #FFF;
-  }
-  &.collapsed {
-    width: 50px;
-  }
-}
 
+/* left navigation */
 .side-nav {
   position: fixed;
   left: 0;
@@ -114,7 +103,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   -o-user-select: none;
   user-select: none;
   &.homeNav {
-    a:hover:not(.nav-link-home) {background-color: rgba(1, 1, 1, 0.04);}
+    .nav-link:hover { background-color: rgba(1, 1, 1, 0.04); }
     .nav-link span {
       color: #333;
     }
@@ -152,13 +141,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   display: block;
   position: relative;
   line-height: 44px;
-  &:hover:not(.nav-link-home) {
+  &:hover {
     background: rgba(1, 1, 1, 0.04);
   }
 }
-.side-nav li:first-of-type a {
-  padding-left: 0;
-}
+
 .home-link {
   min-height: 170px;
 }
@@ -167,7 +154,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   li a {
     border-color: #2d2d2d;
   } 
-  a:hover:not(.nav-link-home) { background-color: #111; }
+  .nav-link:hover { background-color: #111; }
 }
 .nav-link.active  {
   i:before, span { color: #FFC425; }
@@ -186,7 +173,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .details-text {
   @include font (normal, normal, 15px, 21px, Open Sans); 
 }
-/* manifesto styles */
+/* manifesto template styles */
 .manifesto-ul li {
   text-align: left;
   &:nth-of-type(even) {
@@ -205,18 +192,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   font-weight: normal;
   font-style: normal;
 }
-/* logo */
+/* logo & home link */
 .simpr-logo {
   max-width: 100%;
   display: block;
   padding: 20px 0;
   margin: auto;
   text-align: center;
-  -webkit-transition: all ease-in-out .3s;
-     -moz-transition: all ease-in-out .3s;
-      -ms-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
 }
 .transition {
   -webkit-transition: all ease-in-out .3s;
@@ -224,4 +206,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
       -ms-transition: all ease-in-out .3s;
        -o-transition: all ease-in-out .3s;
           transition: all ease-in-out .3s;
+}
+.nav-link-home {
+  display: inline-block;
+  width: 100%;
 }

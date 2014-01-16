@@ -497,22 +497,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   width: 84.375%;
   float: right;
   margin-left: 15.625%;
-  /*background-color: #e6e6e6;*/
   min-height: 100%;
 }
 
 /* left navigation */
-.nav:hover {
-  width: 200px;
-}
-.nav.expanded {
-  width: 15.625%;
-  background: #FFF;
-}
-.nav.collapsed {
-  width: 50px;
-}
-
 .side-nav {
   position: fixed;
   left: 0;
@@ -544,7 +532,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .side-nav.homeNav {
   background: #FFF;
 }
-.side-nav.homeNav a:hover:not(.nav-link-home) {
+.side-nav.homeNav .nav-link:hover {
   background-color: rgba(1, 1, 1, 0.04);
 }
 .side-nav.homeNav .nav-link span {
@@ -583,12 +571,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   position: relative;
   line-height: 44px;
 }
-.side-nav li a:hover:not(.nav-link-home) {
+.side-nav li a:hover {
   background: rgba(1, 1, 1, 0.04);
-}
-
-.side-nav li:first-of-type a {
-  padding-left: 0;
 }
 
 .home-link {
@@ -598,7 +582,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .side-nav:not(.homeNav) li a {
   border-color: #2d2d2d;
 }
-.side-nav:not(.homeNav) a:hover:not(.nav-link-home) {
+.side-nav:not(.homeNav) .nav-link:hover {
   background-color: #111;
 }
 
@@ -622,7 +606,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   line-height: 1.3125rem;
 }
 
-/* manifesto styles */
+/* manifesto template styles */
 .manifesto-ul li {
   text-align: left;
 }
@@ -642,18 +626,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   font-style: normal;
 }
 
-/* logo */
+/* logo & home link */
 .simpr-logo {
   max-width: 100%;
   display: block;
   padding: 20px 0;
   margin: auto;
   text-align: center;
-  -webkit-transition: all ease-in-out .3s;
-  -moz-transition: all ease-in-out .3s;
-  -ms-transition: all ease-in-out .3s;
-  -o-transition: all ease-in-out .3s;
-  transition: all ease-in-out .3s;
 }
 
 .transition {
@@ -662,6 +641,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   -ms-transition: all ease-in-out .3s;
   -o-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
+}
+
+.nav-link-home {
+  display: inline-block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
