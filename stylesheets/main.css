@@ -442,7 +442,7 @@ h5 {
   font-weight: 500;
 }
 
-a, a.link-block .link, a:hover {
+a, a:hover {
   /*color: #218BC3;*/
   text-decoration: none;
 }
@@ -496,17 +496,12 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .wrapper {
   width: 84.375%;
   float: right;
-  margin-left: 200px;
+  margin-left: 15.625%;
   /*background-color: #e6e6e6;*/
   min-height: 100%;
 }
 
 /* left navigation */
-.nav {
-  width: 15.625%;
-  height: 100%;
-  float: left;
-}
 .nav:hover {
   width: 200px;
 }
@@ -523,8 +518,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   left: 0;
   top: 0;
   white-space: nowrap;
-  height: 100%;
   width: 200px;
+  height: 100%;
   overflow: hidden;
   cursor: default;
   color: #C8C8C8;
@@ -549,7 +544,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .side-nav.homeNav {
   background: #FFF;
 }
-.side-nav.homeNav a:hover {
+.side-nav.homeNav a:hover:not(.nav-link-home) {
   background-color: rgba(1, 1, 1, 0.04);
 }
 .side-nav.homeNav .nav-link span {
@@ -588,7 +583,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   position: relative;
   line-height: 44px;
 }
-.side-nav li a:hover {
+.side-nav li a:hover:not(.nav-link-home) {
   background: rgba(1, 1, 1, 0.04);
 }
 
@@ -597,13 +592,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 }
 
 .home-link {
-  min-height: 150px;
+  min-height: 170px;
 }
 
 .side-nav:not(.homeNav) li a {
   border-color: #2d2d2d;
 }
-.side-nav:not(.homeNav) a:hover {
+.side-nav:not(.homeNav) a:hover:not(.nav-link-home) {
   background-color: #111;
 }
 
@@ -651,8 +646,14 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
 .simpr-logo {
   max-width: 100%;
   display: block;
-  margin: 20px auto;
+  padding: 20px 0;
+  margin: auto;
   text-align: center;
+  -webkit-transition: all ease-in-out .3s;
+  -moz-transition: all ease-in-out .3s;
+  -ms-transition: all ease-in-out .3s;
+  -o-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
 }
 
 .transition {
