@@ -1,5 +1,7 @@
 /* Media quieries */
 @media(max-width: 850px) {
+    .nav { margin: auto; }
+    h1, h2 { font-size: 40px; }
   .side-nav {
     position: relative;
     width: 100% !important;
