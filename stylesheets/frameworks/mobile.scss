@@ -1,0 +1,11 @@
+/* Media quieries */
+@media(max-width: 850px) {
+  .side-nav {
+    position: relative;
+    width: 100% !important;
+    height: auto;
+  }  
+  .wrapper {
+    width: 100%;
+  }
+}
