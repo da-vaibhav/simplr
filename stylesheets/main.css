@@ -660,18 +660,17 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr {
   font-size: 1.2rem;
 }
 .nav-link-home .simplr-icon {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   display: inline-block;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  margin-bottom: -20px;
+  /*margin-bottom: -20px;*/
+  margin-left: 10px;
 }
 .nav-link-home .simplr-text {
   display: inline-block;
-  margin-top: -20px;
+  /*margin-top: -20px;*/
 }
-
-/*# sourceMappingURL=main.css.map */
